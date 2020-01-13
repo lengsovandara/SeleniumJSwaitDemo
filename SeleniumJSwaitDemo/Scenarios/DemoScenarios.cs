@@ -16,6 +16,7 @@ namespace SeleniumJSwaitDemo
         {
             _driver.Navigate().GoToUrl("https://www.truffaut.com/");
             _jSWaitHelper.waitUntilJSReady();
+            _jSWaitHelper.ajaxComplete();
         }
         [TestCase]
         public void JQueryIsLoad()

@@ -65,10 +65,9 @@ namespace SeleniumJSwaitDemo.Tool
         }
         public void ajaxComplete()
         {
-            _js.ExecuteScript("var callback = arguments[arguments.length - 1];"
-                                + "var xhr = new XMLHttpRequest();" + "xhr.open('GET', '/Ajax_call', true);"
+            _js.ExecuteScript(  "var xhr = new XMLHttpRequest();" + "xhr.open('GET', '/_vti_bin/webservices/ajaxbreadcrumbservice.svc/push/10283/?_=1578906293672', true);"
                                 + "xhr.onreadystatechange = function() {" + "  if (xhr.readyState == 4) {"
-                                + "    callback(xhr.responseText);" + "  }" + "};" + "xhr.send();");
+                                + "    console.log(xhr.responseText);" + "  }" + "};" + "xhr.send();");
         }
         private void sleep(int timeout)
         {
